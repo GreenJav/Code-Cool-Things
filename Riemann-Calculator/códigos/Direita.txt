@@ -1,0 +1,48 @@
+Direita
+String mensagem = null;
+        
+      try{
+              JEP objJEP= new JEP();
+              objJEP.addStandardFunctions(); // adiciona funcoes matemáticas
+                objJEP.addStandardConstants();//adiciona constantes como o e, e o pi
+                objJEP.setImplicitMul(true);
+                
+                 objJEP.parseExpression(a1);
+                 double a = objJEP.getValue();// coloca um valor pro limite inferior
+                
+                 objJEP.parseExpression(b1);
+                 double b = objJEP.getValue();// coloca um valor pro limite superior
+                 
+                 int nx = Integer.parseInt(n);
+                 
+                 double h = (b-a)/nx;
+                    double x[] = new double [nx+1];
+                    x[0] = a;
+                    x[nx] = b;
+                    
+                    for (int i = 1; i < x.length-1; i++){
+                        x[i] = x[0] + (i+1)*h;     
+                    }
+                    
+                    double fxi[] = new double [nx+1];
+                    
+                    double m = 0;
+                    for (int i = 0; i < x.length; i++){
+                        
+                        fxi[i] = objJEP.addVariable("x", x[i]);
+                        objJEP.parseExpression(fx);// avalia a expressao
+                        fxi[i] = objJEP.getValue();
+                    }
+                    for (int i = 0; i <x.length; i++){
+                        m = m + fxi[i];
+                    }
+                    m = h * m;
+                    
+                    mensagem = Double.toString(m);
+                    
+        }catch(Exception e){
+            mensagem = "erro de dados";
+        }
+        
+        return mensagem;
+}
