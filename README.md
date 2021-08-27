@@ -8,3 +8,5 @@ I really don't know how to show my trajectory in programming but I have a lot of
 3# Data structure - Some codes with data structures
 
 4# Python Codes - Some python codes bruh
+
+5# Java Codes - Some java codes bruh²
