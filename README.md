@@ -10,3 +10,5 @@ I really don't know how to show my trajectory in programming but I have a lot of
 4# Python Codes - Some python codes bruh
 
 5# Java Codes - Some java codes bruh²
+
+6# TrabAnalise - A folder with some very interesting sorting algorithms made for a data analysis assignment
